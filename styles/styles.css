@@ -214,6 +214,7 @@ footer{
 
     header ul{
         display: flex;
+        align-items: center;
     }
 
     header nav a{
