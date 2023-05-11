@@ -40,6 +40,11 @@ h2{
     margin: 0 auto;
 }
 
+.btn{
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+
 /* ! header */
 header{
     background-color: var(--header-color);
@@ -49,14 +54,15 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 50px;
+    padding: 15px 0;
+    box-shadow: 0 2px 1px var(--header-color);
 }
 
 header .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 header nav{
@@ -83,7 +89,6 @@ main section:nth-child(even) .card{
 
 .col{
     padding: 20px 0;
-    border: 1px dashed graY
 }
 
 .card{
@@ -144,6 +149,11 @@ footer{
         display: none;
     }
 
+    /* removse padding so that content is aligned with container */
+    header .container{
+        padding: 0;
+    }
+
     header nav{
         display: block;
     }
@@ -152,8 +162,16 @@ footer{
         display: flex;
     }
 
-    header a{
-        padding: 0 20px;
+    header nav a{
+        /* margin gives non-clickable space between text, while padding gives some clickable area around text */
+        margin: 0 10px;
+        padding: 10px;
+    }
+
+    header .btn{
+        background-color: #fff;
+        color: black;
+        margin-right: 0;
     }
 
     #strategic-planning .row{
