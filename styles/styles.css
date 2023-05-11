@@ -1,22 +1,148 @@
-/* css reset */
-
 /* mobile-first */
 
+/* css reset */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* custom propierties */
+/* ! custom propierties */
 :root{
     --header-color: #0084fd;
     --primary-color: #b5ddff;
     --secondary-color: #9792e4;
+    --third-txt-color: #fdc15f;
     --footer-bg-color: #333333;
-    --footer-txt-color: #fdc15f;
 }
 
+/* ! Generals */
 body{
-    font-family: sans-serif;
+    font-family:'PT sans', sans-serif;
+    padding-top: 100px;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+h2{
+    text-align: center;
+}
+
+/* ! utilities */
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ! header */
+header{
+    background-color: var(--header-color);
+    color: white;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 50px;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header nav{
+    display: none;
+}
+
+header a{
+    color: white;
+}
+
+/* ! main */
+main section{
+    min-height: 200px;
+    padding: 25px;
+}
+
+main section:nth-child(even){
+    background-color: var(--secondary-color);
+}
+
+/* todo remove */
+.col{
+    min-height: 75px;
+    border: 2px dashed black;
+}
+
+/* # section 1 */
+/* # section 2 */
+/* # section 3 */
+/* # section 4 */
+/* # section 5 */
+/* # section 6 */
+
+/* ! footer */
+footer{
+    background-color: var(--footer-bg-color);
+    min-height: 50px;
+}
+
+@media screen and (min-width: 768px) {
+    #app .row,
+    #work-with-us .row,
+    #about-us .row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #app .col{
+        flex-basis: calc(100% / 3);
+    }
+    
+    #app .col.big-col{
+        flex-basis: calc(100% / 3 * 2);
+    }
+    
+    #work-with-us .col,
+    #about-us .col{
+        flex-basis: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header .hamburger{
+        display: none;
+    }
+
+    header nav{
+        display: block;
+    }
+
+    header ul{
+        display: flex;
+    }
+
+    header a{
+        padding: 0 20px;
+    }
+
+    #strategic-planning .row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;        
+    }
+
+    #strategic-planning .col{
+        flex-basis: 50%;
+    }
 }
