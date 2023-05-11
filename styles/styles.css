@@ -71,7 +71,7 @@ p{
     cursor: pointer;
 }
 
-.btn{
+.secondary-btn{
     background-color: var(--secondary-color);
 }
 
@@ -103,10 +103,21 @@ header .container{
     justify-content: space-between;
     align-items: center;
     padding: 0 25px;
+
+    position: relative;
 }
 
 header nav{
     display: none;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    background-color: var(--header-color);
+}
+
+header nav li{
+    padding: 20px;
+    font-size: 2rem;
 }
 
 header a{
@@ -436,11 +447,17 @@ footer a{
 
     header nav{
         display: block;
+        position: static;
     }
 
     header ul{
         display: flex;
         align-items: center;
+    }
+
+    header nav li{
+        font-size: 1rem;
+        padding: 0;
     }
 
     header nav a{
