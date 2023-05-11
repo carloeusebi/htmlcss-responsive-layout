@@ -35,7 +35,9 @@ li{
 }
 
 h2{
+    font-size: 2.5rem;
     text-align: center;
+    margin-bottom: 25px;
 }
 
 h3{
@@ -46,6 +48,10 @@ h3{
 img{
     display: block;
     max-width: 100%;
+}
+
+p{
+    line-height: 1.5;
 }
 
 /* ! utilities */
@@ -108,6 +114,10 @@ main section:nth-child(even) .card{
     background-color: #fff;
 }
 
+main section:nth-child(odd) h2{
+    color: var(--secondary-color);
+}
+
 .col{
     padding: 25px 0 0;
 }
@@ -132,7 +142,6 @@ main section:nth-child(even) .card{
 #app p{
     color: #555;
     font-weight: bold;
-    line-height: 1.5;
     margin-bottom: 30px;
 }
 
@@ -188,6 +197,43 @@ main section:nth-child(even) .card{
 }
 
 /* # section 4 */
+#testimonials .testimonials-header p{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#testimonials img{
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+    object-fit: cover;
+    padding: 30px;
+}
+
+#testimonials strong{
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 30px;
+}
+
+#testimonials .card{
+    color: white;
+    font-size: 1.2rem;
+}
+
+#testimonials .card p::before{
+    content: '\f10d';
+    font: var(--fa-font-solid);
+    padding-right: 5px;
+}
+
+#testimonials .card p::after{
+    content: '\f10e';
+    font: var(--fa-font-solid);
+    padding-left: 5px;
+}
+
+
 /* # section 5 */
 /* # section 6 */
 
@@ -223,6 +269,23 @@ footer{
     #about-us .col{
         flex-basis: 50%;
         padding: 10px;
+    }
+
+    #testimonials .card{
+        display: flex;
+        text-align: left;
+    }
+
+    #testimonials img{
+        width: 20%;
+        padding: 0;
+    }
+
+    #testimonials .testimonials-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 40px;
     }
 }
 
