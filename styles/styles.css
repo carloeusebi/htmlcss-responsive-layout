@@ -51,7 +51,7 @@ img{
 }
 
 p{
-    line-height: 1.5;
+    line-height: 1.8;
 }
 
 /* ! utilities */
@@ -196,7 +196,6 @@ main section:nth-child(odd) h2{
     margin-top: 25px;
 }
 
-/* # section 4 */
 #testimonials .testimonials-header p{
     text-align: center;
     margin-bottom: 50px;
@@ -233,8 +232,37 @@ main section:nth-child(odd) h2{
     padding-left: 5px;
 }
 
+/* # section 4 */
+#work-with-us .card{
+    text-align: left;
+}
+
+#work-with-us h3,
+#work-with-us .benefit-number{
+    color: var(--secondary-color);
+}
+
+#work-with-us .benefit-number{
+    font-size: 68px;
+    font-weight: bolder;
+    padding-bottom: 30px;
+}
+
+#work-with-us p{
+    color: #555;
+}
+
+#work-with-us .btn{
+    color: white;
+    letter-spacing: 3px;
+    font-weight: bold;
+    padding: 10px 50px;
+    margin: 20px 0;
+}
 
 /* # section 5 */
+
+
 /* # section 6 */
 
 /* ! footer */
