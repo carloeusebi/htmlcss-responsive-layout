@@ -71,7 +71,7 @@ p{
     cursor: pointer;
 }
 
-.secondary-btn{
+.btn-secondary{
     background-color: var(--secondary-color);
 }
 
@@ -103,7 +103,7 @@ header .container{
     justify-content: space-between;
     align-items: center;
     padding: 0 25px;
-
+    
     position: relative;
 }
 
@@ -113,15 +113,21 @@ header nav{
     right: 0;
     top: 55px;
     background-color: var(--header-color);
+    box-shadow: 0 2px 1px var(--header-color);
 }
 
 header nav li{
     padding: 20px;
-    font-size: 2rem;
+    font-size: 1.25rem;
 }
 
 header a{
     color: white;
+}
+
+header .btn{
+    background-color: white;
+    color: var(--header-color);
 }
 
 /* ! main */
@@ -211,7 +217,7 @@ main section:nth-child(odd) h2{
     margin-bottom: 40px;
 }
 
-#strategic-planning .col:first-of-type h3{
+#strategic-planning h3.resizable{
     margin-top: 75px;
     font-size: 1.75rem;
 }
@@ -382,10 +388,12 @@ footer a{
 }
 
 @media screen and (min-width: 768px) {
+    /* small container contains elements on the footer and some in the last section */
     .small-container{
         max-width: 600px;
     }
 
+    /* this rows are now flex boxes */
     #app .row,
     #work-with-us .row,
     #about-us .row{
@@ -399,12 +407,19 @@ footer a{
         padding: 10px;
     }
     
+    /* first item is twice as big */
     #app .col.big-col{
         flex-basis: calc(100% / 3 * 2);
     }
 
+    /* this limits first card phone image size when in tablet mode */
     #app .col.big-col img{
         width: 55%;
+    }
+
+    /* this h3 grows when in tablet mode, but goes back to normal on desktop mode */
+    #strategic-planning h3.resizable{
+        font-size: 4rem;
     }
     
     #work-with-us .col{
@@ -418,10 +433,11 @@ footer a{
     }
     
     #testimonials img{
-        width: 20%;
+        width: 25%;
         padding: 0;
     }
     
+    /* this centers vertically the text inside testimonial's card */
     #testimonials .testimonials-text{
         display: flex;
         flex-direction: column;
@@ -436,15 +452,12 @@ footer a{
 }
 
 @media screen and (min-width: 1024px) {
-    header .hamburger{
+    /* on dekstop hamburger menu disappears */
+    header #hamburger{
         display: none;
     }
 
-    /* removse padding so that content is aligned with container */
-    header .container{
-        padding: 0;
-    }
-
+    /* and navbar appears */
     header nav{
         display: block;
         position: static;
@@ -484,6 +497,10 @@ footer a{
         width: 100%;
     }
 
+    #strategic-planning h3.resizable{
+        font-size: 1.75rem;
+    }
+
     #strategic-planning .row{
         display: flex;
         justify-content: center;        
@@ -511,4 +528,12 @@ footer a{
     #about-us .right-col{
         flex-basis: 33.3%;
     }    
+}
+
+@media screen and (min-width: 1220px) {
+    /* when screen is as wide as container it removes header's padding so nov logo and navbar are aligned with rest of content */
+    header .container{
+        padding: 0;
+    }
+    
 }

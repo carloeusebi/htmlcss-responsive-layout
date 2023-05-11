@@ -26,8 +26,8 @@
                     <img src="img/logo.png" alt="logjo">
                 </a>
             </div>
-            <div class="hamburger"><i class="fa-solid fa-bars fa-2x"></i></div>
-            <nav>
+            <div id="hamburger"><i class="fa-solid fa-bars fa-2x"></i></div>
+            <nav id="mynav">
                 <ul>
                     <li><a href="#">Planning</a></li>
                     <li><a href="#">Testimonials</a></li>
@@ -117,7 +117,7 @@
 
                     <div class="col">
                             <img src="img/planning1.png" alt="planning">
-                            <h3>Strategic Planning</h3>
+                            <h3 class="resizable">Strategic Planning</h3>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, explicabo quo! Reiciendis cum at eaque vero harum cumque enim dolorem sapiente animi perspiciatis fugit, voluptate ipsam maiores nisi odio! Consequuntur!</p>
                     </div>
 
@@ -262,7 +262,7 @@
                     <div class="col right-col">   
                         <img src="img/about.jpg" alt="He who helps fermentum odio">
                         <div class="quote">I help companies tincidunt tortos aliquam nulla facilisi cras fermentum odio.</div>
-                        <a href="https://www.linkedin.com/in/carlo-eusebi-a283b2271/" class="btn secodary-btn" target="_blank">
+                        <a href="https://www.linkedin.com/in/carlo-eusebi-a283b2271/" class="btn btn-secondary" target="_blank">
                             <i class="fa-brands fa-linkedin"></i>Find me on linkedin
                         </a>
                     </div>
@@ -303,3 +303,19 @@
 
 </body>
 </html>
+
+
+<!-- uncommenting this hamburger menu should work in smarthpone and tablet modes -->
+<!-- <script>    
+    let flag = false;
+
+    document.getElementById('hamburger').addEventListener("touchstart", function(){
+        if (flag){
+            document.getElementById('mynav').style.display = "none";
+            flag = false;
+        } else {
+            document.getElementById('mynav').style.display = "block";
+            flag = true;
+        }
+    })
+</script> -->
