@@ -79,6 +79,8 @@ header{
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
+
     width: 100%;
     padding: 15px 0;
     box-shadow: 0 2px 1px var(--header-color);
@@ -243,7 +245,7 @@ main section:nth-child(odd) h2{
 }
 
 #work-with-us .benefit-number{
-    font-size: 68px;
+    font-size: 4rem;
     font-weight: bolder;
     padding-bottom: 30px;
 }
@@ -261,7 +263,51 @@ main section:nth-child(odd) h2{
 }
 
 /* # section 5 */
+#about-us h2{
+    text-align: left;
+    font-size: 4rem;
+}
 
+#about-us p{
+    margin-bottom: 30px;
+}
+
+#about-us img{
+    width: 66%;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+#about-us .right-col{
+    position: relative;
+}
+
+#about-us .right-col::before{
+    display: block;
+    content: '\f10d';
+    font: var(--fa-font-solid);
+    color: var(--secondary-color);
+    font-size: 6rem;
+
+    position:absolute;
+    top: 15px;
+    left: 185px;
+}
+
+#about-us .quote{
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    font-weight: bolder;
+}
+
+#about-us .btn{
+    color: white;
+    margin: 25px 0;
+}
+
+#about-us .btn .fa-linkedin{
+    padding-right: 10px;
+}
 
 /* # section 6 */
 
@@ -293,27 +339,31 @@ footer{
         width: 55%;
     }
     
-    #work-with-us .col,
-    #about-us .col{
+    #work-with-us .col{
         flex-basis: 50%;
         padding: 10px;
     }
-
+    
     #testimonials .card{
         display: flex;
         text-align: left;
     }
-
+    
     #testimonials img{
         width: 20%;
         padding: 0;
     }
-
+    
     #testimonials .testimonials-text{
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding-left: 40px;
+    }
+
+    #about-us .col{
+        flex-basis: 50%;
+        padding: 40px;
     }
 }
 
@@ -378,5 +428,13 @@ footer{
 
     #work-with-us .col{
         flex-basis: calc(100% / 3);
+    }
+
+    #about-us .left-col{
+        flex-basis: 66.6%;
+    }
+
+    #about-us .right-col{
+        flex-basis: 33.3%;
     }
 }
