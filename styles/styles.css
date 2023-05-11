@@ -1,0 +1,22 @@
+/* css reset */
+
+/* mobile-first */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* custom propierties */
+:root{
+    --header-color: #0084fd;
+    --primary-color: #b5ddff;
+    --secondary-color: #9792e4;
+    --footer-bg-color: #333333;
+    --footer-txt-color: #fdc15f;
+}
+
+body{
+    font-family: sans-serif;
+}
