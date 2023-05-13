@@ -56,7 +56,7 @@ p{
 
 /* ! utilities */
 .container{
-    max-width: 1200px;
+    max-width: 550px;
     margin: 0 auto;
 }
 
@@ -388,6 +388,9 @@ footer a{
 }
 
 @media screen and (min-width: 768px) {
+    .container{
+        max-width: 800px;
+    }
     /* small container contains elements on the footer and some in the last section */
     .small-container{
         max-width: 600px;
@@ -452,6 +455,10 @@ footer a{
 }
 
 @media screen and (min-width: 1024px) {
+    .container{
+        max-width: 1200px;
+    }
+
     /* on dekstop hamburger menu disappears */
     header #hamburger{
         display: none;
